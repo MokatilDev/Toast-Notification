@@ -17,8 +17,8 @@
     --Color-Button: #7a7474;
     --Bg-Button: #1C1C1C;
     --Boder: #3E3E3E;
-    --Color-Basic: #7245FA;
-    --Boder-Basic: #7245fa93;
+    --Color-Basic: #469cff;
+    --Boder-Basic: #469cffa2;
     --Bg-correct: #30ff41a8;
     --boder-correct : #67ff39;
     --Bg-incorrect : #ff3030cc;
@@ -66,11 +66,50 @@ button{
 
 .Notifications{
     position: fixed;
-    top: 30px;
+    top: 0px;
     right: 30px;
 }
 .Notification{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 20px;
+    background-color: var(--Bg-Button);
+    border: 1px solid var(--Boder);
+    border-radius: 7px;
+    margin-top: 10px;
 }
+
+.TitlesOfNotification span{
+    font-size: 1.1rem;
+}
+.TitlesOfNotification{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon i{
+    color: var(--boder-correct);
+    font-size: 1.2rem;
+}
+
+.fa-xmark{
+    color: var(--Color-Button);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.icon.error i{
+    color: var(--Boder-incorrect);
+}
+.icon.warning i{
+    color: var(--boder-Warning);
+}
+
+.icon.info i{
+    color: var(--Color-Basic);
+}
+
