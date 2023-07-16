@@ -22,7 +22,7 @@
     --Bg-correct: #30ff41a8;
     --boder-correct : #67ff39;
     --Bg-incorrect : #ff3030cc;
-    --Boder-incorrect : #ff3939;
+    --Boder-incorrect : #ff3030;
     --boder-Warning : #ffe030;
     --Bg-Warning : #ffe030ab;
 }
@@ -78,6 +78,24 @@ button{
     border: 1px solid var(--Boder);
     border-radius: 7px;
     margin-top: 10px;
+    overflow: hidden;
+    animation: lol 0.3s ease forwards;
+    position: relative;
+}
+
+@keyframes lol {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
 }
 
 .TitlesOfNotification span{
@@ -111,5 +129,38 @@ button{
 
 .icon.info i{
     color: var(--Color-Basic);
+}
+
+.Notification::before{
+    content: "";
+    background-color: var(--boder-correct);
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: por 5s linear forwards;
+}
+
+@keyframes por {
+    100%{
+        width: 0%;
+    }
+}
+
+.NotificationInfo::before{
+    background-color: var(--Color-Basic);
+}
+
+.NotificationWarning::before{
+    background-color: var(--boder-Warning);
+}
+
+.NotificationError::before{
+    background-color:var(--Boder-incorrect);
+}
+
+.NotificationSuccess::before{
+    background-color: var(--boder-correct);
 }
 
