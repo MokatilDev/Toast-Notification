@@ -18,5 +18,59 @@
     --Bg-Button: #1C1C1C;
     --Boder: #3E3E3E;
     --Color-Basic: #7245FA;
-    --Boder-Basic: #7245fa69;
+    --Boder-Basic: #7245fa93;
+    --Bg-correct: #30ff41a8;
+    --boder-correct : #67ff39;
+    --Bg-incorrect : #ff3030cc;
+    --Boder-incorrect : #ff3939;
+    --boder-Warning : #ffe030;
+    --Bg-Warning : #ffe030ab;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Bg-Button);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    padding: 8px 20px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    background-color: var(--Boder-Basic);
+    border: 1px solid var(--Color-Basic);
+    cursor: pointer;
+    
+}
+
+.Success{
+    background-color: var(--Bg-correct);
+    border: 1px solid var(--boder-correct);
+}
+.Error{
+    background-color: var(--Bg-incorrect);
+    border: 1px solid var(--Boder-incorrect);
+}
+
+.Warning{
+    background-color: var(--Bg-Warning);
+    border: 1px solid var(--boder-Warning);
+}
+
+
+
+.Notifications{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+.Notification{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
