@@ -10,7 +10,6 @@
     color: var(--Color-Normal);
     outline: none;
 }
-
 :root{
     --Color-main: rgb(15, 15, 15);
     --Color-Normal: #fff;
@@ -26,7 +25,6 @@
     --boder-Warning : #ffe030;
     --Bg-Warning : #ffe030ab;
 }
-
 body{
     width: 100%;
     min-height: 100vh;
@@ -36,9 +34,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
-
 button{
     padding: 8px 20px;
     border-radius: 7px;
@@ -46,9 +41,7 @@ button{
     background-color: var(--Boder-Basic);
     border: 1px solid var(--Color-Basic);
     cursor: pointer;
-    
 }
-
 .Success{
     background-color: var(--Bg-correct);
     border: 1px solid var(--boder-correct);
@@ -57,19 +50,15 @@ button{
     background-color: var(--Bg-incorrect);
     border: 1px solid var(--Boder-incorrect);
 }
-
 .Warning{
     background-color: var(--Bg-Warning);
     border: 1px solid var(--boder-Warning);
 }
-
 ul{
     position: fixed;
     top: 10px;
     right: 30px;
 }
-
-
 li{
     position: relative;
     display: flex;
@@ -84,7 +73,6 @@ li{
     overflow: hidden;
     animation: show_toast 0.3s ease-in-out forwards;
 }
-
 @keyframes show_toast {
     0%{
         transform: translateX(100%);
@@ -96,28 +84,23 @@ li{
         transform: translateX(-10px);
     }
 }
-
 li div span{
     font-size: 1.2rem;
 }
-
 li div i{
     display: flex;
     align-items: center;
     font-size: 1.4rem;
 }
-
 .fa-xmark{
     font-size: 1.2rem;
     color: var(--Color-Button);
     transition: all 0.3s;
     cursor: pointer;
 }
-
 .fa-xmark:hover{
     color: #d8d8d8;
 }
-
 #SuccessToast div i {
     color: var(--boder-correct);
 }
@@ -130,7 +113,6 @@ li div i{
 #InfoToast div i {
     color: var(--Color-Basic);
 }
-
 li::before{
     position:absolute;
     content: "";
@@ -141,7 +123,6 @@ li::before{
     background-color: #ffffff;
     animation: pro 5s ease forwards;
 }
-
 @keyframes pro {
     From{
         width: 100%;
@@ -149,8 +130,6 @@ li::before{
         width: 0%;
     }
 }
-
-
 #SuccessToast::before{
     background-color: var(--boder-correct);
 }
@@ -163,12 +142,9 @@ li::before{
 #InfoToast::before{
     background-color: var(--Color-Basic);
 }
-
 li.hide{
-    
     animation: hide 0.3s ease forwards;
 }
-
 @keyframes hide {
     0%{
         transform: translateX(-10px);
