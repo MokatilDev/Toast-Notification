@@ -37,6 +37,9 @@ body{
     align-items: center;
 }
 
+.Buttons{
+    position: relative;
+}
 
 button{
     padding: 8px 20px;
@@ -62,7 +65,51 @@ button{
     border: 1px solid var(--boder-Warning);
 }
 
+ul{
+    position: fixed;
+    top: 10px;
+    right: 30px;
+}
+
 
 li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--Bg-Button);
+    border: 1px solid var(--Boder);
+    padding: 14px 20px;
+    border-radius: 7px;
+    margin-bottom: 10px;
     
 }
+
+li div span{
+    font-size: 1.2rem;
+}
+
+li div i{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.fa-xmark{
+    font-size: 1.2rem;
+    color: var(--Color-Button);
+}
+
+#Success div i {
+    color: var(--boder-correct);
+}
+#Error div i {
+    color: var(--Boder-incorrect);
+}
+#Warning div i {
+    color: var(--boder-Warning);
+}
+#Info div i {
+    color: var(--Color-Basic);
+}
+
