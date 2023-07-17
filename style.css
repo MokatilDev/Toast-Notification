@@ -220,3 +220,45 @@ li.hide {
         
     }
 }
+
+
+.Mokatil {
+    color: var(--Color-Normal);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.Mokatil span {
+    color: var(--Color-Normal);
+    text-decoration: underline #7245fa;
+    transition: all 0.3s;
+    margin: 0;
+
+}
+
+.uil-twitter{
+    color: var(--Color-Button);
+    background-color: var(--Bg-Button);
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    border: 1px solid var(--Boder);
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+.uil-twitter:hover {
+    color: var(--Color-Normal);
+    margin: 0;
+    background-color: #7245fa69;
+    border: 1px solid #7245fa;
+}
+
+.Title{
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
