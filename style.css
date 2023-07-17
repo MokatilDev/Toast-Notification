@@ -37,9 +37,7 @@ body{
     align-items: center;
 }
 
-.Buttons{
-    position: relative;
-}
+
 
 button{
     padding: 8px 20px;
@@ -84,7 +82,13 @@ li{
     border-radius: 7px;
     margin-top: 10px;
     overflow: hidden;
-    
+    animation: show_toast 0.3s ease forwards;
+}
+
+@keyframes show_toast {
+    0%{
+        transform: translateX(100%);
+    }
 }
 
 li div span{
@@ -102,16 +106,16 @@ li div i{
     color: var(--Color-Button);
 }
 
-#Success div i {
+#SuccessToast div i {
     color: var(--boder-correct);
 }
-#Error div i {
+#ErrorToast div i {
     color: var(--Boder-incorrect);
 }
-#Warning div i {
+#WarningToast div i {
     color: var(--boder-Warning);
 }
-#Info div i {
+#InfoToast div i {
     color: var(--Color-Basic);
 }
 
@@ -123,4 +127,28 @@ li::before{
     bottom: 0;
     left: 0;
     background-color: #ffffff;
+    animation: pro 5s ease forwards;
 }
+
+@keyframes pro {
+    From{
+        width: 100%;
+    }to{
+        width: 0%;
+    }
+}
+
+
+#SuccessToast::before{
+    background-color: var(--boder-correct);
+}
+#ErrorToast::before{
+    background-color: var(--Boder-incorrect);
+}
+#WarningToast::before{
+    background-color: var(--boder-Warning);
+}
+#InfoToast::before{
+    background-color: var(--Color-Basic);
+}
+
