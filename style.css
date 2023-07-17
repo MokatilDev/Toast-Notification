@@ -73,6 +73,7 @@ ul{
 
 
 li{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,7 +82,8 @@ li{
     border: 1px solid var(--Boder);
     padding: 14px 20px;
     border-radius: 7px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
     
 }
 
@@ -113,3 +115,12 @@ li div i{
     color: var(--Color-Basic);
 }
 
+li::before{
+    position:absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+}
