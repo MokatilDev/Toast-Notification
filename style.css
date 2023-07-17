@@ -82,12 +82,18 @@ li{
     border-radius: 7px;
     margin-top: 10px;
     overflow: hidden;
-    animation: show_toast 0.3s ease forwards;
+    animation: show_toast 0.3s ease-in-out forwards;
 }
 
 @keyframes show_toast {
     0%{
         transform: translateX(100%);
+    }40%{
+        transform: translateX(-5%);
+    }80%{
+        transform: translateX(0%);
+    }100%{
+        transform: translateX(-10px);
     }
 }
 
@@ -104,6 +110,12 @@ li div i{
 .fa-xmark{
     font-size: 1.2rem;
     color: var(--Color-Button);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.fa-xmark:hover{
+    color: #d8d8d8;
 }
 
 #SuccessToast div i {
@@ -152,3 +164,19 @@ li::before{
     background-color: var(--Color-Basic);
 }
 
+li.hide{
+    
+    animation: hide 0.3s ease forwards;
+}
+
+@keyframes hide {
+    0%{
+        transform: translateX(-10px);
+    }40%{
+        transform: translateX(0%);
+    }80%{
+        transform: translateX(-5%);
+    }100%{
+        transform: translateX(calc(100% + 30px));
+    }
+}
